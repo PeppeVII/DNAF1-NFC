@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #8f0c21, #000000);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+    padding: 10px; /* Ridotto il padding per mobile */
+}
+
+/* Contenitore principale */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Più largo su mobile */
+    max-width: 600px; /* Limite massimo per desktop */
+    min-height: 80vh; /* Altezza minima per bilanciare il contenuto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra il contenuto verticalmente */
+    box-sizing: border-box;
+}
+
+/* Animazione della macchina F1 */
+.f1-car-animation {
+    margin-top: 15px;
+    width: 100%;
+    height: 50px; /* Ridotto per mobile */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Stile base per tutte le macchine */
+.f1-car {
+    width: 40px; /* Ridotto per mobile */
+    height: 40px;
+    position: absolute;
+    top: 0; /* Tutte sulla stessa corsia */
+}
+
+/* Macchina 1 (velocità media: 10s, parte subito) */
+.f1-car-1 {
+    animation: drive 10s linear infinite;
+    animation-delay: 0s;
+  transform: scaleX(-1);
+}
+
+/* Macchina 2 (più veloce: 9s, parte con un piccolo ritardo) */
+.f1-car-2 {
+    animation: drive 9s linear infinite;
+    animation-delay: 0.5s;
+}
+
+/* Macchina 3 (più lenta: 11s, parte con un ritardo maggiore) */
+.f1-car-3 {
+    animation: drive 11s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes drive {
+    0% {
+        left: -40px; /* Aggiornato per la nuova dimensione */
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Header (contenitore delle scritte) */
+.header {
+    margin-bottom: 15px;
+}
+
+/* Scritta piccola sopra (Admin DNA F1) */
+.role {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px; /* Ridotto per mobile */
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Scritta grande al centro (Giuseppe D'Ambrosio) */
+h1 {
+    font-family: 'Alice', serif;
+    font-size: 28px; /* Ridotto per mobile */
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+/* Scritta piccola sotto (Seguici sui nostri social) */
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px; /* Ridotto per mobile */
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Divisore minimal */
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 15px 0;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenitore dei pulsanti principali */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Ridotto per mobile */
+}
+
+/* Stile dei pulsanti principali */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Ridotto per mobile */
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; /* Ridotto per mobile */
+    border-radius: 8px;
+    background: #2a2a2a;
+    border: 2px solid transparent;
+    transition: transform 0.2s, opacity 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icone dei pulsanti principali */
+.icon {
+    width: 16px; /* Ridotto per mobile */
+    height: 16px;
+    margin-right: 8px;
+}
+
+/* Bordi colorati per i pulsanti principali */
+.instagram {
+    border-color: #e4405f;
+}
+
+.twitch {
+    border-color: #6441a5;
+}
+
+.website {
+    border-color: #666;
+}
+
+/* Effetto hover per i pulsanti principali */
+.button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
+/* Contenitore dei social personali */
+.personal-socials {
+    margin-top: 15px;
+}
+
+/* Testo "I miei social personali" */
+.personal-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px; /* Ridotto per mobile */
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+/* Contenitore dei pulsanti circolari */
+.circle-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Ridotto per mobile */
+}
+
+/* Stile dei pulsanti circolari */
+.circle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Ridotto per mobile */
+    height: 40px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icone dei pulsanti circolari */
+.circle-icon {
+    width: 20px; /* Ridotto per mobile */
+    height: 20px;
+}
+
+/* Bordi colorati per i pulsanti circolari */
+.instagram-circle {
+    border-color: #e4405f;
+}
+
+.linkedin-circle {
+    border-color: #0e76a8;
+}
+
+.email-circle {
+    border-color: #c71610;
+}
+
+/* Effetto hover per i pulsanti circolari */
+.circle-button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+    border-color: #ffffff;
+}
+
+/* Effetto pit stop */
+.button::after, .circle-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.button.clicked::after, .circle-button.clicked::after {
+    left: 100%;
+}
+
+/* Stile del contatore F1 */
+.f1-event-counter {
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px; /* Ridotto per mobile */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.f1-event-counter p {
+    margin: 3px 0;
+}
+
+/* Stile per "Created by" */
+.created-by {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px; /* Ridotto per mobile */
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.created-by p {
+    margin: 0;
+}
+
+.created-by a {
+    color: #e4405f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.created-by a:hover {
+    color: #ffffff;
+}
+
+/* Media query per desktop */
+@media (min-width: 768px) {
+    .container {
+        width: 70%; /* Più stretto su desktop */
+        max-width: 500px;
+        min-height: 70vh;
+    }
+
+    .role, .subtitle, .personal-label {
+        font-size: 12px;
+        letter-spacing: 5.7px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .button {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .links {
+        gap: 15px;
+    }
+
+    .circle-links {
+        gap: 20px;
+    }
+
+    .circle-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .f1-event-counter {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .f1-car-animation {
+        height: 60px;
+    }
+
+    .f1-car {
+        width: 60px;
+        height: 60px;
+    }
+
+    @keyframes drive {
+        0% {
+            left: -60px;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+
+    .created-by {
+        font-size: 12px;
+    }
+}
